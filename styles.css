@@ -1,31 +1,27 @@
-/* your code here */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
 }
 
-.container {
-    max-width: 800px;
-    margin: auto;
+.product {
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 20px;
     background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-}
-
-h1 {
-    text-align: center;
-    color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
 }
 
 .product__photo {
-    text-align: center;
+    flex: 2;
+    margin-right: 20px;
 }
 
 .photo-container {
@@ -34,13 +30,33 @@ h1 {
     align-items: center;
 }
 
+.photo-main {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
 .photo-main img {
-    max-width: 100%;
+    width: 100%;
     border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.controls i {
+    font-size: 24px;
+    margin-left: 10px;
+    color: #333;
+    cursor: pointer;
 }
 
 .photo-album {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .photo-album ul {
@@ -55,8 +71,8 @@ h1 {
 }
 
 .photo-album img {
-    max-width: 100%;
-    border: 2px solid #ddd;
+    width: 80px;
+    height: 80px;
     border-radius: 4px;
     transition: transform 0.2s;
 }
@@ -65,27 +81,83 @@ h1 {
     transform: scale(1.1);
 }
 
+.product__info {
+    flex: 3;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.title h1 {
+    color: #2c3e50;
+}
+
 .price {
     font-size: 24px;
     font-weight: bold;
     color: #e67e22;
-    margin: 15px 0;
+    text-align: center;
+    margin: 10px 0;
 }
 
 .variant {
     margin: 20px 0;
 }
 
+.variant h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.variant ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.variant li {
+    margin: 0 10px;
+}
+
+.variant img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    transition: border 0.3s;
+}
+
+.variant img:hover {
+    border: 2px solid #e67e22;
+}
+
 .description {
-    margin: 20px 0;
+    margin-top: 20px;
+    padding: 15px;
+    background: #ecf0f1;
+    border-radius: 8px;
+}
+
+.description h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.description p {
+    text-align: center;
+    line-height: 1.5;
 }
 
 .add-to-cart {
     display: block;
     width: 100%;
     padding: 10px;
+    margin-top: 20px;
     font-size: 18px;
-    background-color: #2ecc71;
+    background-color: #27ae60;
     color: white;
     border: none;
     border-radius: 5px;
@@ -94,5 +166,6 @@ h1 {
 }
 
 .add-to-cart:hover {
-    background-color: #27ae60;
+    background-color: #219150;
 }
+
